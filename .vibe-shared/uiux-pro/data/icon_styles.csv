@@ -1,9 +1,0 @@
-id,name,style,description,size_default,compatible_styles
-1,Lucide Line,Line,"Clean line icons, modern","20px","1,4,5,6,10"
-2,Font Awesome Solid,Solid,"Filled solid icons, bold","18px","2,3,7,9"
-3,Heroicons Outline,Line,"Rounded line icons, friendly","22px","4,8"
-4,Phosphor Duotone,Duotone,"Two-tone colored icons","20px","1,5,7"
-5,Bootstrap Icons,Mixed,"Versatile icon set","20px","all"
-6,Remix Icons,Line,"Comprehensive line icons","20px","all"
-7,Iconoir,Line,"Ultra thin line icons","24px","4,10"
-8,Tabler Icons,Line,"Pixel perfect stroke icons","22px","1,4,6"
