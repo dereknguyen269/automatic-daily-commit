@@ -1,0 +1,25 @@
+chart_id,chart_name,keywords,best_for,data_type,complexity,visual_impact
+chart001,Line Chart,trend time series growth progress timeline temporal,Showing trends over time,temporal,low,medium
+chart002,Bar Chart,comparison categories ranking vertical horizontal compare,Comparing categories,categorical,low,medium
+chart003,Pie Chart,proportion percentage part whole distribution share,Showing proportions of a whole,percentage,low,low
+chart004,Donut Chart,proportion percentage hollow modern clean ring,Showing proportions with modern style,percentage,low,medium
+chart005,Area Chart,volume trend filled gradient accumulation stack,Showing volume over time,temporal,medium,high
+chart006,Scatter Plot,correlation relationship distribution pattern bivariate,Showing correlations between variables,bivariate,medium,medium
+chart007,Heatmap,density pattern matrix intensity comparison grid,Showing data density patterns,matrix,high,high
+chart008,Funnel Chart,conversion pipeline stages drop-off process flow,Showing conversion rates through stages,sequential,medium,high
+chart009,Gauge Chart,metrics kpi performance progress indicator speedometer,Showing single metric performance,scalar,low,high
+chart010,Radar Chart,multivariate comparison spider dimensions polygon,Comparing multiple variables at once,multivariate,high,high
+chart011,Treemap,hierarchy nested proportions space-filling rectangles,Showing hierarchical data with proportions,hierarchical,high,high
+chart012,Sankey Diagram,flow allocation transfer process stream network,Showing flows between nodes,flow,high,high
+chart013,Candlestick,stock price financial trading market ohlc,Financial data visualization OHLC,financial,high,medium
+chart014,Bubble Chart,three dimensional comparison size scatter trivariate,Comparing three dimensions of data,trivariate,medium,high
+chart015,Waterfall Chart,cumulative change breakdown contribution sequential,Showing cumulative effects of values,sequential,medium,high
+chart016,Box Plot,distribution quartiles outliers statistical variance,Showing statistical distributions,statistical,high,medium
+chart017,Violin Plot,distribution density comparison statistical shape,Showing distribution density and shape,statistical,high,high
+chart018,Stacked Bar,composition comparison categories breakdown parts,Comparing composition across categories,categorical_composition,medium,medium
+chart019,Stacked Area,composition trend layers temporal accumulation,Showing composition changes over time,temporal_composition,medium,high
+chart020,Polar Chart,circular radial comparison cyclical angular,Showing cyclical or directional data,circular,medium,high
+chart021,Timeline,chronological events schedule history sequential,Showing events in chronological order,temporal_events,low,medium
+chart022,Network Graph,relationships connections nodes edges graph,Showing relationships between entities,network,high,high
+chart023,Gantt Chart,project schedule tasks timeline dependencies,Project timeline and task scheduling,project_timeline,medium,medium
+chart024,Histogram,distribution frequency bins statistical range,Showing frequency distribution of data,frequency_distribution,medium,medium
