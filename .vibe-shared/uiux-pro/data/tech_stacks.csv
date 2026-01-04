@@ -1,9 +1,0 @@
-stack_id,stack_name,keywords,technologies,complexity,build_time,best_for
-stack001,HTML/CSS/JS,vanilla javascript simple quick static html basic,HTML5 + CSS3 + Vanilla JavaScript,low,fast,Simple landing pages with minimal interactivity
-stack002,React,react component modern spa interactive dynamic,React + Tailwind CSS,medium,medium,Interactive web apps and dashboards
-stack003,Next.js,nextjs react ssr seo performance modern framework,Next.js + React + Tailwind CSS,medium,medium,SEO-critical sites and performant apps
-stack004,Vue,vue component progressive simple lightweight intuitive,Vue 3 + Composition API + Vite,medium,medium,Progressive web apps with clean syntax
-stack005,Svelte,svelte compiler fast minimal lightweight reactive,SvelteKit + Tailwind CSS,medium,fast,Performance-critical applications
-stack006,Astro,astro static fast islands performance content,Astro + React Islands + Tailwind,low,fast,Content-heavy static sites and blogs
-stack007,Webflow,webflow nocode visual designer cms drag-drop,Webflow (No-code platform),low,fast,No-code users and rapid prototyping
-stack008,Framer,framer interactive animation prototype motion design,Framer Motion + React + TypeScript,high,medium,Animation-heavy interactive experiences

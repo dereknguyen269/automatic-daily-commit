@@ -1,9 +1,0 @@
-id,name,description,avatar_style,bio_placement,link_spacing,max_width,padding,best_for
-1,Centered Classic,"Avatar top, bio below, links stacked centered","circle-large","below-avatar","comfortable","450px","wide","Traditional, professional"
-2,Header Split,"Avatar left, bio right, links below","circle-medium","beside-avatar","tight","600px","normal","Modern, space-efficient"
-3,Minimal Stack,"Small avatar, minimal bio, focus on links","circle-small","above-links","extra-tight","400px","minimal","Link-focused, clean"
-4,Hero Banner,"Large banner bg, avatar overlay, links on gradient","circle-bordered","overlay-banner","comfortable","700px","wide","Visual, brand-focused"
-5,Card Grid,"Links in 2-column grid instead of stack","circle-medium","top-center","grid-gap","600px","normal","Many links, organized"
-6,Sticky Header,"Avatar + bio sticky on scroll, links scroll","circle-small","sticky-top","comfortable","500px","normal","Long link lists"
-7,Asymmetric,"Off-center layout, creative positioning","square-tilted","side","varied","650px","asymmetric","Creative, artistic"
-8,Fullscreen,"Full viewport height, centered vertically","circle-xlarge","below-avatar","extra-comfortable","500px","wide","Dramatic, minimal links"
