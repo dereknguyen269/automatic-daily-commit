@@ -1,0 +1,11 @@
+id,name,style_type,description,hover_effect,icon_position,best_for,compatible_ui_styles
+1,Floating Card,3D,"Elevated card with shadow, lifts on hover","lift-scale","left","Premium feel, standout links","1,6,10"
+2,Pill Solid,Filled,"Rounded pill shape, solid color fill","brightness-increase","left","Clean, modern, professional","4,5,6"
+3,Outline Glow,Bordered,"Transparent with border, glows on hover","glow-pulse","none","Minimal, elegant","1,4"
+4,Gradient Shift,Dynamic,"Gradient background that shifts on hover","gradient-move","right","Vibrant, eye-catching","5,7"
+5,Neumorphic Push,Tactile,"Soft embossed, pushes in on click","push-in","left","Premium, interactive","6"
+6,Retro Scan,Animated,"Scan line animation on hover","scan-line","none","Nostalgic, tech","7,9"
+7,Blob Morph,Organic,"Organic blob shape, morphs on hover","blob-morph","center","Friendly, playful","3,8"
+8,Glass Frosted,Transparent,"Frosted glass with blur","blur-increase","left","Modern, layered","1"
+9,Neon Border,Glowing,"Neon border glow effect","neon-pulse","right","Bold, cyberpunk","7,9"
+10,Minimal Underline,Simple,"Text with animated underline","underline-expand","none","Clean, text-focused","4,5,10"

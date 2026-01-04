@@ -1,0 +1,97 @@
+product_id,product_name,keywords,category,target_audience,common_features,typical_style,urgency_level
+prod001,SaaS Platform,software service cloud subscription b2b saas platform,Software,business_professionals,pricing_tiers demo_video integrations testimonials features,minimal_tech,medium
+prod002,Mobile App,ios android app download mobile application,Mobile,general_consumers,app_store_badges screenshots features benefits download_cta,modern_friendly,high
+prod003,E-commerce Store,shop store product ecommerce buy sell retail online,Retail,shoppers,product_grid cart checkout trust_badges payment_methods shipping,clean_vibrant,high
+prod004,Crypto/Web3,blockchain crypto nft web3 defi token cryptocurrency,Blockchain,crypto_enthusiasts,roadmap tokenomics whitepaper community wallet_connect,futuristic_bold,high
+prod005,AI Tool,artificial intelligence machine learning automation ai ml,AI/ML,tech_users,demo live_preview features pricing api_access use_cases,tech_gradient,medium
+prod006,Marketing Agency,agency marketing design branding services digital,Services,businesses,portfolio case_studies services team testimonials contact,creative_bold,low
+prod007,Online Course,education course learning training teach tutorial elearning,Education,learners,curriculum instructor testimonials pricing certification syllabus,friendly_trustworthy,medium
+prod008,Newsletter,newsletter email subscribe content blog publication,Content,readers,subscription_form benefits archive samples frequency,minimal_clean,low
+prod009,Event/Conference,conference event workshop summit meetup gathering,Events,attendees,agenda speakers venue registration tickets schedule,energetic_modern,high
+prod010,Real Estate,property house apartment real estate buy rent,Real Estate,buyers_renters,property_listings location virtual_tour contact inquiry,luxury_professional,medium
+prod011,Health/Fitness,fitness health workout wellness gym yoga exercise,Health,health_conscious,programs trainers results pricing schedule membership,energetic_natural,medium
+prod012,Financial Services,finance investment banking money loan insurance,Finance,investors_clients,services trust_indicators security calculator consultation,professional_trust,low
+prod013,Restaurant/Cafe,food restaurant cafe menu delivery dining,Food,diners,menu location hours reservation photos reviews,warm_appetizing,medium
+prod014,Music/Entertainment,music entertainment artist band concert streaming media,Entertainment,fans_audiences,media_player tour_dates merch social_links gallery,bold_creative,high
+prod015,Gaming,game gaming esports play video game streamer,Gaming,gamers,gameplay trailer features download leaderboard community,dark_energetic,high
+prod016,Podcast,podcast audio listen subscribe show episode,Audio,listeners,episodes player subscribe rss_feed topics hosts,minimal_modern,low
+prod017,Consulting,consulting advisory expert business strategy,Services,businesses,expertise services case_studies team contact booking,professional_clean,low
+prod018,Portfolio,portfolio creative work showcase designer developer,Personal,clients_employers,projects gallery about skills contact resume,creative_minimal,low
+prod019,Travel/Tourism,travel tourism destination vacation trip tour adventure,Travel,travelers,destinations gallery booking reviews itinerary packages,vibrant_inspiring,medium
+prod020,Photography,photography photos visual creative portfolio,Creative,clients,portfolio gallery services pricing contact booking,visual_elegant,low
+prod021,Legal Services,law legal attorney lawyer firm justice,Legal,clients,practice_areas attorneys consultation testimonials contact,professional_trustworthy,low
+prod022,Healthcare,medical health doctor clinic hospital patient care,Healthcare,patients,services doctors appointments insurance contact location,clean_trustworthy,medium
+prod023,Nonprofit/Charity,nonprofit charity donate cause social impact,Social,donors_volunteers,mission impact donate volunteer stories financials,inspiring_trustworthy,medium
+prod024,Job Board,jobs careers employment hiring recruitment,Employment,job_seekers,job_listings filters companies post_job resume,clean_functional,medium
+prod025,Dating App,dating app relationship match love social,Social,singles,features photos profiles matching signup premium,playful_friendly,high
+prod026,Productivity Tool,productivity task management organize efficiency,Productivity,professionals,features pricing integrations workflow templates,clean_modern,medium
+prod027,CRM Software,crm customer relationship management sales b2b,Software,sales_teams,features pipeline automation reporting integrations pricing,professional_modern,medium
+prod028,Analytics Platform,analytics data insights metrics tracking dashboard,Analytics,data_teams,dashboard reports integrations api pricing features,tech_professional,medium
+prod029,Payment Gateway,payment processing transaction gateway merchant,Finance,merchants,features security integration pricing compliance support,trustworthy_secure,low
+prod030,Cloud Storage,cloud storage backup sync file sharing drive,Software,users_businesses,storage_plans features security sharing sync,clean_modern,medium
+prod031,VPN Service,vpn security privacy encryption protection anonymous,Security,privacy_users,servers encryption speed pricing features apps,secure_dark,high
+prod032,Video Streaming,video streaming watch content entertainment platform,Entertainment,viewers,content player subscription plans devices features,modern_immersive,medium
+prod033,Design Tool,design graphic creative tool editor software,Creative,designers,features templates collaboration pricing export,creative_modern,medium
+prod034,Email Marketing,email marketing campaign automation newsletter,Marketing,marketers,templates automation analytics pricing integration,professional_colorful,medium
+prod035,Social Media Tool,social media management scheduling analytics posting,Marketing,social_managers,scheduling analytics posting team pricing platforms,colorful_modern,medium
+prod036,Website Builder,website builder nocode create site drag drop,Software,entrepreneurs,templates editor hosting domain pricing features,friendly_modern,medium
+prod037,SEO Tool,seo optimization ranking keywords analytics search,Marketing,marketers,analysis keywords ranking reporting pricing features,professional_data,medium
+prod038,Booking System,booking appointment scheduling calendar reservation,Software,service_businesses,calendar scheduling payment reminders integration pricing,clean_functional,medium
+prod039,Learning Platform,learning platform courses education training elearning,Education,learners_educators,courses progress certificates community pricing features,friendly_educational,medium
+prod040,Recruitment Platform,recruitment hiring ats applicant tracking talent,HR,recruiters,ats pipeline candidates reporting integration pricing,professional_clean,medium
+prod041,Accounting Software,accounting bookkeeping financial invoice expense,Finance,businesses,features automation reporting invoicing expense pricing,professional_trustworthy,low
+prod042,Project Management,project management collaboration task team workflow,Productivity,teams,tasks kanban gantt collaboration reporting pricing,organized_modern,medium
+prod043,Video Conferencing,video conferencing meeting call collaboration zoom,Communication,teams_remote,features screen_share recording quality pricing apps,clean_professional,medium
+prod044,Password Manager,password security vault manager encryption protection,Security,users,vault encryption autofill sync pricing security,secure_minimal,medium
+prod045,Survey Tool,survey feedback form questionnaire data collection,Research,researchers,templates analytics responses integration pricing export,clean_functional,low
+prod046,Translation Service,translation language localization multilingual global,Services,businesses_individuals,languages quality turnaround pricing accuracy api,professional_global,medium
+prod047,Interior Design,interior design home decor furniture space,Design,homeowners,portfolio services style pricing consultation gallery,elegant_visual,low
+prod048,Pet Services,pet animal care grooming veterinary boarding,Services,pet_owners,services location booking staff pricing reviews,friendly_playful,medium
+prod049,Moving Services,moving relocation transport storage logistics,Services,movers,services quote locations fleet pricing booking,professional_reliable,medium
+prod050,Insurance,insurance coverage policy protection claim,Finance,customers,coverage quote claim pricing protection comparison,trustworthy_professional,low
+prod051,Car Rental,car rental vehicle hire transport travel,Transportation,travelers,vehicles location booking pricing insurance features,clean_professional,medium
+prod052,Hotel/Hospitality,hotel accommodation lodging stay hospitality,Hospitality,travelers,rooms booking amenities location gallery reviews,luxury_welcoming,medium
+prod053,Coworking Space,coworking office space shared workspace community,Real Estate,professionals_startups,spaces amenities pricing location booking community,modern_collaborative,medium
+prod054,Fashion Brand,fashion clothing brand style apparel designer,Fashion,shoppers,collection lookbook shop about sizing delivery,stylish_bold,high
+prod055,Beauty/Cosmetics,beauty cosmetics makeup skincare products,Beauty,customers,products ingredients reviews shop benefits tutorial,elegant_feminine,medium
+prod056,Jewelry,jewelry accessories luxury gems rings necklace,Luxury,customers,collection custom materials shop care certificate,luxury_elegant,medium
+prod057,Home Services,home services repair maintenance handyman plumbing,Services,homeowners,services areas booking emergency pricing reviews,reliable_professional,medium
+prod058,Delivery Service,delivery courier shipping logistics transport,Logistics,businesses_consumers,coverage tracking pricing signup business integration,efficient_modern,high
+prod059,Marketplace,marketplace platform buy sell trade community,Platform,buyers_sellers,listings categories search seller_dashboard payment,functional_vibrant,medium
+prod060,Freelance Platform,freelance gig platform hire talent work remote,Platform,freelancers_clients,talent_pool projects payment profile messaging,modern_collaborative,medium
+prod061,Ride Sharing,ride sharing transport taxi driver passenger,Transportation,riders_drivers,ride booking driver safety pricing coverage,modern_efficient,high
+prod062,Smart Home,smart home iot automation device connected,Technology,homeowners,devices automation control app integration features,tech_modern,medium
+prod063,Cybersecurity,cybersecurity security protection threat defense,Security,businesses,solutions features protection compliance reporting pricing,secure_professional,low
+prod064,Construction,construction building contractor renovation project,Construction,clients,projects services portfolio team contact estimate,professional_industrial,low
+prod065,Agriculture,agriculture farming crops livestock equipment,Agriculture,farmers,products services equipment technology support distribution,natural_professional,low
+prod066,Manufacturing,manufacturing production factory industrial supply,Industrial,businesses,capabilities equipment quality processes contact quote,industrial_professional,low
+prod067,Logistics,logistics supply chain warehouse distribution,Logistics,businesses,services network tracking technology integration pricing,efficient_professional,low
+prod068,Energy,energy renewable solar power sustainable green,Energy,businesses_homeowners,solutions benefits installation savings quote sustainability,clean_modern,medium
+prod069,Architecture,architecture design building planning construction,Design,clients,projects services portfolio team approach contact,sophisticated_visual,low
+prod070,PR Agency,public relations pr media communication agency,Marketing,businesses,services clients media expertise team contact,professional_modern,low
+prod071,Influencer Platform,influencer creator content brand partnership,Marketing,influencers_brands,creators campaigns analytics payment features pricing,colorful_modern,medium
+prod072,Stock Photos,stock photos images royalty free download,Creative,creators_businesses,library search pricing license download subscription,visual_clean,medium
+prod073,Music Production,music production studio recording mixing mastering,Creative,musicians,services portfolio equipment booking pricing reviews,creative_professional,low
+prod074,Video Production,video production film content creation editing,Creative,businesses,services portfolio equipment process pricing reel,cinematic_professional,low
+prod075,Print Services,printing print shop custom design business,Services,businesses,products upload design pricing delivery quality,functional_professional,medium
+prod076,Catering,catering food event party wedding service,Food,clients,menu events gallery booking pricing reviews testimonials,appetizing_elegant,medium
+prod077,Cleaning Services,cleaning service janitorial home office commercial,Services,homeowners_businesses,services areas booking pricing frequency reviews,clean_trustworthy,medium
+prod078,Tutoring,tutoring education tutor learning student teacher,Education,students_parents,subjects tutors pricing booking approach reviews,educational_friendly,medium
+prod079,Therapy/Counseling,therapy counseling mental health wellness counselor,Healthcare,clients,services therapists approach booking insurance privacy,calm_trustworthy,low
+prod080,Dental,dental dentist teeth oral health smile care,Healthcare,patients,services team technology location insurance appointment,clean_trustworthy,medium
+prod081,Veterinary,veterinary vet animal pet care hospital,Healthcare,pet_owners,services doctors location emergency appointment hours,friendly_trustworthy,medium
+prod082,Auto Repair,auto repair mechanic car service maintenance,Services,vehicle_owners,services location pricing appointment reviews fleet,professional_reliable,medium
+prod083,Barber/Salon,barber salon hair beauty style grooming,Beauty,customers,services stylists gallery booking pricing products,stylish_modern,medium
+prod084,Gym/Studio,gym fitness studio workout training facility,Fitness,members,classes trainers membership schedule facilities amenities,energetic_motivating,medium
+prod085,Spa/Wellness,spa wellness massage relaxation beauty therapy,Wellness,clients,services treatments products booking pricing atmosphere,calm_luxurious,low
+prod086,Brewery/Winery,brewery winery craft beer wine tasting,Food,customers,products location hours tasting events visit,rustic_authentic,medium
+prod087,Bakery,bakery bread pastry cafe dessert custom,Food,customers,products menu custom location hours delivery,warm_appetizing,medium
+prod088,Coffee Shop,coffee cafe espresso roastery specialty bean,Food,customers,menu location hours beans merchandise atmosphere,cozy_artisan,medium
+prod089,Bar/Nightclub,bar nightclub drinks music entertainment venue,Entertainment,patrons,drinks events music location hours gallery,energetic_nightlife,high
+prod090,Theater/Cinema,theater cinema movie show entertainment venue,Entertainment,audiences,shows schedule tickets seating venue concessions,classic_entertainment,medium
+prod091,Museum/Gallery,museum gallery art exhibition culture history,Culture,visitors,exhibitions collection hours tickets visit virtual,elegant_cultural,low
+prod092,Library,library books reading community learning resources,Education,community,catalog events programs hours membership location,educational_community,low
+prod093,Childcare,childcare daycare preschool children care education,Education,parents,programs curriculum staff schedule enrollment safety,friendly_nurturing,medium
+prod094,Senior Care,senior elderly care assisted living nursing,Healthcare,families,services care amenities location visit testimonials,caring_trustworthy,low
+prod095,Moving/Packing,moving packing storage relocation supplies,Services,movers,services quote supplies storage areas pricing,efficient_reliable,medium
+prod096,Waste Management,waste management recycling disposal trash environmental,Services,businesses_municipalities,services coverage sustainability equipment pricing,clean_responsible,low

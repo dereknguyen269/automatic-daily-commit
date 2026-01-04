@@ -1,0 +1,57 @@
+font_id,pairing_name,keywords,heading_font,heading_weight,body_font,body_weight,category,mood,readability
+font001,Modern Sans,modern clean simple tech professional minimal,Inter,700,Inter,400,sans_serif,professional_clean,high
+font002,Tech Futura,tech futuristic modern geometric bold space,Space Grotesk,700,Inter,400,sans_serif,tech_modern,high
+font003,Editorial Serif,editorial elegant sophisticated classic magazine,Playfair Display,700,Source Serif Pro,400,serif,elegant_classic,high
+font004,Friendly Round,friendly approachable casual playful rounded soft,Nunito,700,Nunito,400,sans_serif,friendly_casual,high
+font005,Corporate Pro,corporate business professional trust clean reliable,Roboto,700,Open Sans,400,sans_serif,corporate_trust,high
+font006,Creative Bold,creative bold artistic expressive unique impact,Montserrat,800,Raleway,400,sans_serif,bold_creative,medium
+font007,Luxury Serif,luxury premium elegant sophisticated high-end refined,Cormorant,700,Lora,400,serif,luxury_elegant,high
+font008,Startup Sans,startup modern young energetic dynamic fresh,Outfit,700,Inter,400,sans_serif,energetic_modern,high
+font009,Academic Serif,academic traditional scholarly formal research,Merriweather,700,Georgia,400,serif,formal_traditional,high
+font010,Minimal Swiss,minimal swiss grid clean simple timeless,Helvetica,700,Helvetica,400,sans_serif,minimal_timeless,high
+font011,Display Impact,display bold attention headline impact statement,Bebas Neue,700,Roboto,400,display,bold_impact,medium
+font012,Elegant Script,elegant script handwritten personal feminine delicate,Dancing Script,600,Lato,400,script,elegant_personal,low
+font013,Monospace Code,code tech developer monospace programming terminal,Fira Code,600,Fira Code,400,monospace,tech_developer,high
+font014,Geometric Modern,geometric modern precise technical clean structured,Poppins,700,Poppins,400,sans_serif,modern_precise,high
+font015,Handwritten Casual,handwritten casual personal authentic friendly human,Caveat,600,Open Sans,400,handwritten,casual_friendly,medium
+font016,Bold Statement,bold statement strong confident powerful attention,Oswald,700,Lato,400,sans_serif,bold_confident,high
+font017,Refined Classic,refined classic timeless elegant traditional sophisticated,Libre Baskerville,700,Libre Baskerville,400,serif,refined_classic,high
+font018,Tech Minimal,tech minimal clean modern efficient simple,Work Sans,600,Work Sans,400,sans_serif,clean_efficient,high
+font019,Artistic Display,artistic display creative unique expressive avant-garde,Abril Fatface,700,PT Sans,400,display,artistic_expressive,medium
+font020,Professional Stack,professional corporate business formal structured,Source Sans Pro,700,Source Sans Pro,400,sans_serif,professional_structured,high
+font021,Warm Serif,warm serif friendly approachable readable comfortable,Crimson Text,700,Crimson Text,400,serif,warm_approachable,high
+font022,Contemporary Sans,contemporary sans modern fresh trendy current,DM Sans,700,DM Sans,400,sans_serif,modern_fresh,high
+font023,Editorial Magazine,editorial magazine journalism publishing news,Spectral,700,Spectral,400,serif,editorial_journalistic,high
+font024,Compact Bold,compact bold tight efficient space-saving condensed,Archivo Narrow,700,Archivo Narrow,400,sans_serif,compact_efficient,high
+font025,Elegant Didone,elegant didone sophisticated refined luxury fashion,Bodoni Moda,700,Spectral,400,serif,elegant_sophisticated,high
+font026,Rounded Friendly,rounded friendly soft approachable playful gentle,Quicksand,700,Quicksand,400,sans_serif,soft_friendly,high
+font027,Industrial Strong,industrial strong bold geometric mechanical,Industry,800,Roboto,400,sans_serif,industrial_bold,medium
+font028,Vintage Retro,vintage retro nostalgic classic old-school heritage,Abril Fatface,700,Old Standard TT,400,display,vintage_nostalgic,medium
+font029,Clean Neutral,clean neutral versatile simple readable universal,Inter,600,Inter,400,sans_serif,neutral_versatile,high
+font030,Expressive Display,expressive display dramatic bold theatrical statement,Righteous,700,Lato,400,display,dramatic_expressive,medium
+font031,Humanist Warm,humanist warm friendly organic natural approachable,PT Serif,700,PT Serif,400,serif,warm_organic,high
+font032,Tech Geometric,tech geometric modern precise structured angular,Exo 2,700,Exo 2,400,sans_serif,tech_geometric,high
+font033,Elegant Thin,elegant thin refined delicate sophisticated minimal,Raleway,300,Raleway,300,sans_serif,refined_delicate,medium
+font034,Bold Condensed,bold condensed tight impactful space-efficient strong,Fjalla One,700,Open Sans,400,sans_serif,bold_tight,medium
+font035,Classic Roman,classic roman traditional timeless serif formal,EB Garamond,700,EB Garamond,400,serif,classic_timeless,high
+font036,Modern Slab,modern slab strong geometric bold structured,Roboto Slab,700,Roboto Slab,400,slab_serif,strong_modern,high
+font037,Playful Round,playful round fun cute friendly children kid,Baloo 2,700,Baloo 2,400,sans_serif,playful_fun,high
+font038,Sophisticated Narrow,sophisticated narrow elegant efficient refined structured,Libre Franklin,600,Libre Franklin,400,sans_serif,sophisticated_narrow,high
+font039,Transitional Serif,transitional serif balanced traditional modern versatile,Lora,700,Lora,400,serif,balanced_transitional,high
+font040,Geometric Bold,geometric bold modern strong structured angular,Jost,700,Jost,400,sans_serif,geometric_strong,high
+font041,Graceful Script,graceful script flowing elegant feminine romantic,Great Vibes,600,Crimson Text,400,script,graceful_flowing,low
+font042,Tech Mono,tech mono monospace code developer terminal programming,JetBrains Mono,600,JetBrains Mono,400,monospace,tech_mono,high
+font043,Casual Handwriting,casual handwriting natural authentic personal human,Kalam,600,Lato,400,handwritten,casual_natural,medium
+font044,Bold Slab,bold slab strong impactful confident powerful,Arvo,700,Arvo,400,slab_serif,bold_confident,high
+font045,Minimal Grotesque,minimal grotesque clean modern neutral simple,IBM Plex Sans,600,IBM Plex Sans,400,sans_serif,minimal_neutral,high
+font046,Art Nouveau,art nouveau decorative elegant vintage ornate classic,Cinzel Decorative,700,Cinzel,400,decorative,elegant_decorative,low
+font047,Newspaper Classic,newspaper classic editorial traditional readable journalistic,PT Serif Caption,700,PT Serif,400,serif,editorial_traditional,high
+font048,Strong Industrial,strong industrial mechanical bold geometric rugged,Barlow,800,Barlow,400,sans_serif,industrial_mechanical,high
+font049,Elegant Contrast,elegant contrast dramatic sophisticated high-contrast refined,Libre Caslon Text,700,Libre Caslon Text,400,serif,elegant_dramatic,high
+font050,Tech Futuristic,tech futuristic modern sci-fi digital angular,Orbitron,700,Rajdhani,400,sans_serif,futuristic_sci-fi,medium
+font051,Soft Humanist,soft humanist warm friendly readable comfortable,Source Serif Pro,600,Source Serif Pro,400,serif,soft_humanist,high
+font052,Compact Efficient,compact efficient tight space-saving readable dense,Barlow Condensed,600,Barlow Condensed,400,sans_serif,efficient_compact,high
+font053,Display Theatrical,display theatrical dramatic bold expressive statement,Righteous,800,PT Sans,400,display,theatrical_dramatic,low
+font054,Refined Didot,refined didot elegant sophisticated fashion luxury,Bodoni Moda,700,Lora,400,serif,refined_luxury,high
+font055,Techno Future,techno future digital cyber electronic modern,Audiowide,700,Exo,400,display,techno_digital,medium
+font056,Warm Rounded,warm rounded soft friendly approachable gentle comfortable,Comfortaa,700,Comfortaa,400,sans_serif,warm_comfortable,high
