@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Automate your GitHub commits on a daily schedule using GitHub Actions. Zero configuration, smart detection, and timestamped logs.">
+    <meta name="description"
+        content="Automate your GitHub commits on a daily schedule using GitHub Actions. Zero configuration, smart detection, and timestamped logs.">
     <title>Automatic Daily Commit - GitHub Actions Automation</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -24,19 +27,22 @@
                     <span>AutoCommit</span>
                 </a>
                 <div class="nav-links">
+                    <a href="#commit-chart">Activity</a>
                     <a href="#features">Features</a>
                     <a href="#how-it-works">How It Works</a>
                     <a href="#setup">Setup</a>
-                    <a href="https://github.com/dereknguyen269/automatic-daily-commit" target="_blank" class="btn-primary">
+                    <a href="https://github.com/dereknguyen269/automatic-daily-commit" target="_blank"
+                        class="btn-primary">
                         <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
                         View on GitHub
                     </a>
                 </div>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 6h16M4 12h16M4 18h16"/>
+                        <path d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
@@ -49,18 +55,20 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">Automate Your GitHub Commits</h1>
-                    <p class="hero-subtitle">Keep your contribution streak alive with scheduled commits using GitHub Actions. Zero configuration required.</p>
+                    <p class="hero-subtitle">Keep your contribution streak alive with scheduled commits using GitHub
+                        Actions. Zero configuration required.</p>
                     <div class="hero-buttons">
                         <a href="#setup" class="btn-primary btn-large">
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                             </svg>
                             Quick Start
                         </a>
-                        <a href="https://github.com/dereknguyen269/automatic-daily-commit" target="_blank" class="btn-secondary btn-large">
+                        <a href="https://github.com/dereknguyen269/automatic-daily-commit" target="_blank"
+                            class="btn-secondary btn-large">
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polygon points="10 8 16 12 10 16 10 8"/>
+                                <circle cx="12" cy="12" r="10" />
+                                <polygon points="10 8 16 12 10 16 10 8" />
                             </svg>
                             View Demo
                         </a>
@@ -81,7 +89,58 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="hero_automation_illustration_1767494287408.png" alt="Automation Illustration" class="hero-illustration">
+                    <img src="hero_automation_illustration_1767494287408.png" alt="Automation Illustration"
+                        class="hero-illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commit Chart Section -->
+    <section id="commit-chart" class="commit-chart">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Contribution Journey</h2>
+                <p class="section-subtitle">Visualize your automated commit activity at a glance</p>
+            </div>
+            <div class="chart-container">
+                <div class="chart-wrapper">
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <span class="legend-label">Less</span>
+                        </div>
+                        <div class="legend-gradient">
+                            <div class="legend-box level-0"></div>
+                            <div class="legend-box level-1"></div>
+                            <div class="legend-box level-2"></div>
+                            <div class="legend-box level-3"></div>
+                            <div class="legend-box level-4"></div>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-label">More</span>
+                        </div>
+                    </div>
+                    <div class="chart-grid" id="commitChart">
+                        <!-- Chart will be generated dynamically by JavaScript -->
+                    </div>
+                    <div class="chart-stats">
+                        <div class="chart-stat-item">
+                            <div class="chart-stat-value" id="totalCommits">0</div>
+                            <div class="chart-stat-label">Total Commits</div>
+                        </div>
+                        <div class="chart-stat-item">
+                            <div class="chart-stat-value" id="currentStreak">0</div>
+                            <div class="chart-stat-label">Current Streak</div>
+                        </div>
+                        <div class="chart-stat-item">
+                            <div class="chart-stat-value" id="longestStreak">0</div>
+                            <div class="chart-stat-label">Longest Streak</div>
+                        </div>
+                        <div class="chart-stat-item">
+                            <div class="chart-stat-value" id="busyDay">Mon</div>
+                            <div class="chart-stat-label">Busiest Day</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,60 +157,66 @@
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <path d="M16 2v4M8 2v4M3 10h18"/>
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <path d="M16 2v4M8 2v4M3 10h18" />
                         </svg>
                     </div>
                     <h3 class="feature-title">Automated Daily Commits</h3>
-                    <p class="feature-description">Runs every day at midnight UTC or on your custom schedule. Never miss a day in your contribution streak.</p>
+                    <p class="feature-description">Runs every day at midnight UTC or on your custom schedule. Never miss
+                        a day in your contribution streak.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 11l3 3L22 4"/>
-                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            <path d="M9 11l3 3L22 4" />
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
                         </svg>
                     </div>
                     <h3 class="feature-title">Smart Detection</h3>
-                    <p class="feature-description">Only commits when there are actual changes. No unnecessary commits cluttering your history.</p>
+                    <p class="feature-description">Only commits when there are actual changes. No unnecessary commits
+                        cluttering your history.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                         </svg>
                     </div>
                     <h3 class="feature-title">Manual Trigger</h3>
-                    <p class="feature-description">Trigger the workflow manually from GitHub Actions tab whenever you need it.</p>
+                    <p class="feature-description">Trigger the workflow manually from GitHub Actions tab whenever you
+                        need it.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
                         </svg>
                     </div>
                     <h3 class="feature-title">Timestamped Logs</h3>
-                    <p class="feature-description">Maintains a daily log with precise timestamps for complete activity tracking.</p>
+                    <p class="feature-description">Maintains a daily log with precise timestamps for complete activity
+                        tracking.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                         </svg>
                     </div>
                     <h3 class="feature-title">Zero Configuration</h3>
-                    <p class="feature-description">Works out of the box with GitHub's built-in authentication. No tokens or secrets required.</p>
+                    <p class="feature-description">Works out of the box with GitHub's built-in authentication. No tokens
+                        or secrets required.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"/>
-                            <polyline points="8 6 2 12 8 18"/>
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
                         </svg>
                     </div>
                     <h3 class="feature-title">Fully Customizable</h3>
-                    <p class="feature-description">Customize schedule, commit messages, and what gets updated. Full control over your automation.</p>
+                    <p class="feature-description">Customize schedule, commit messages, and what gets updated. Full
+                        control over your automation.</p>
                 </div>
             </div>
         </div>
@@ -169,7 +234,8 @@
                     <div class="timeline-number">1</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Schedule</h3>
-                        <p class="timeline-description">GitHub Actions runs daily at 00:00 UTC (customizable to any schedule you prefer)</p>
+                        <p class="timeline-description">GitHub Actions runs daily at 00:00 UTC (customizable to any
+                            schedule you prefer)</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -190,14 +256,16 @@
                     <div class="timeline-number">4</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Commit</h3>
-                        <p class="timeline-description">Creates a commit with your custom message if changes are detected</p>
+                        <p class="timeline-description">Creates a commit with your custom message if changes are
+                            detected</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-number">5</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Push</h3>
-                        <p class="timeline-description">Automatically pushes changes to your main branch using secure authentication</p>
+                        <p class="timeline-description">Automatically pushes changes to your main branch using secure
+                            authentication</p>
                     </div>
                 </div>
             </div>
@@ -223,8 +291,8 @@ cd automatic-daily-commit</code>
                         <button class="copy-btn" data-copy="git clone https://github.com/dereknguyen269/automatic-daily-commit.git
 cd automatic-daily-commit">
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
                             </svg>
                         </button>
                     </div>
@@ -242,8 +310,8 @@ git push origin main</code>
 git commit -m &quot;Initial commit&quot;
 git push origin main">
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
                             </svg>
                         </button>
                     </div>
@@ -254,17 +322,20 @@ git push origin main">
                         Enable GitHub Actions
                     </h3>
                     <p class="setup-description">
-                        Go to your repository on GitHub → Navigate to the <strong>Actions</strong> tab → The workflow will appear automatically and run on schedule or can be triggered manually.
+                        Go to your repository on GitHub → Navigate to the <strong>Actions</strong> tab → The workflow
+                        will appear automatically and run on schedule or can be triggered manually.
                     </p>
                 </div>
             </div>
             <div class="setup-note">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M12 16v-4M12 8h.01"/>
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 16v-4M12 8h.01" />
                 </svg>
                 <div>
-                    <strong>Pro Tip:</strong> Customize the schedule by editing <code>.github/workflows/daily-commit.yml</code>. Use <a href="https://crontab.guru/" target="_blank">crontab.guru</a> to create custom cron expressions.
+                    <strong>Pro Tip:</strong> Customize the schedule by editing
+                    <code>.github/workflows/daily-commit.yml</code>. Use <a href="https://crontab.guru/"
+                        target="_blank">crontab.guru</a> to create custom cron expressions.
                 </div>
             </div>
         </div>
@@ -280,51 +351,51 @@ git push origin main">
             <div class="use-cases-grid">
                 <div class="use-case-card">
                     <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                        <polyline points="22 4 12 14.01 9 11.01"/>
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
                     </svg>
                     <h3>Contribution Streaks</h3>
                     <p>Maintain GitHub contribution streaks for visibility and consistency</p>
                 </div>
                 <div class="use-case-card">
                     <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                        <polyline points="7 10 12 15 17 10"/>
-                        <line x1="12" y1="15" x2="12" y2="3"/>
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
                     </svg>
                     <h3>Daily Backups</h3>
                     <p>Automated daily backups of important files and data</p>
                 </div>
                 <div class="use-case-card">
                     <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/>
-                        <line x1="16" y1="17" x2="8" y2="17"/>
-                        <polyline points="10 9 9 9 8 9"/>
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
                     </svg>
                     <h3>Progress Logs</h3>
                     <p>Track daily progress with timestamped activity logs</p>
                 </div>
                 <div class="use-case-card">
                     <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                     </svg>
                     <h3>Activity History</h3>
                     <p>Keep a complete activity history with automated commits</p>
                 </div>
                 <div class="use-case-card">
                     <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12 6 12 12 16 14"/>
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
                     </svg>
                     <h3>Data Collection</h3>
                     <p>Automated commits for scheduled data collection tasks</p>
                 </div>
                 <div class="use-case-card">
                     <svg class="use-case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
-                        <line x1="4" y1="22" x2="4" y2="15"/>
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                        <line x1="4" y1="22" x2="4" y2="15" />
                     </svg>
                     <h3>Project Milestones</h3>
                     <p>Mark daily milestones and achievements automatically</p>
@@ -339,11 +410,14 @@ git push origin main">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 class="footer-title">Automatic Daily Commit</h3>
-                    <p class="footer-description">Automate your GitHub commits with zero configuration using GitHub Actions.</p>
+                    <p class="footer-description">Automate your GitHub commits with zero configuration using GitHub
+                        Actions.</p>
                     <div class="social-links">
-                        <a href="https://github.com/dereknguyen269/automatic-daily-commit" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/dereknguyen269/automatic-daily-commit" target="_blank"
+                            aria-label="GitHub">
                             <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
                         </a>
                     </div>
@@ -360,8 +434,10 @@ git push origin main">
                 <div class="footer-section">
                     <h4 class="footer-section-title">Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit" target="_blank">GitHub Repository</a></li>
-                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit/blob/main/README.md" target="_blank">Documentation</a></li>
+                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit" target="_blank">GitHub
+                                Repository</a></li>
+                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit/blob/main/README.md"
+                                target="_blank">Documentation</a></li>
                         <li><a href="https://docs.github.com/en/actions" target="_blank">GitHub Actions Docs</a></li>
                         <li><a href="https://crontab.guru/" target="_blank">Cron Expression Generator</a></li>
                     </ul>
@@ -369,9 +445,12 @@ git push origin main">
                 <div class="footer-section">
                     <h4 class="footer-section-title">Support</h4>
                     <ul class="footer-links">
-                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit/issues" target="_blank">Report Issues</a></li>
-                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit/discussions" target="_blank">Discussions</a></li>
-                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit/blob/main/LICENSE" target="_blank">License (MIT)</a></li>
+                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit/issues"
+                                target="_blank">Report Issues</a></li>
+                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit/discussions"
+                                target="_blank">Discussions</a></li>
+                        <li><a href="https://github.com/dereknguyen269/automatic-daily-commit/blob/main/LICENSE"
+                                target="_blank">License (MIT)</a></li>
                     </ul>
                 </div>
             </div>
@@ -383,4 +462,5 @@ git push origin main">
 
     <script src="script.js"></script>
 </body>
+
 </html>
