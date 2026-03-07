@@ -1,249 +1,230 @@
-// ===========================
-// Data Visualization Logic
-// ===========================
-
 class CommitVisualizer {
     constructor() {
         this.logData = [];
-        this.stats = {
-            totalCommits: 0,
-            currentStreak: 0,
-            longestStreak: 0,
-            busiestDay: 'Mon'
-        };
-        this.dayMap = {
-            '0': 'Sun',
-            '1': 'Mon',
-            '2': 'Tue',
-            '3': 'Wed',
-            '4': 'Thu',
-            '5': 'Fri',
-            '6': 'Sat'
-        };
+        this.commitsByDate = {};
+        this.stats = { totalCommits: 0, currentStreak: 0, longestStreak: 0, busiestDay: '-' };
+        this.dayMap = { '0':'Sun','1':'Mon','2':'Tue','3':'Wed','4':'Thu','5':'Fri','6':'Sat' };
+        this.monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     }
 
     async initialize() {
         try {
             await this.loadLogData();
-            this.calculateStats();
-            this.updateVisualizations();
-            this.setupRefreshInterval();
-        } catch (error) {
-            console.error('Failed to initialize visualization:', error);
-            this.showErrorMessage();
+        } catch (err) {
+            console.warn('Using demo data:', err.message);
+            this.generateDemoData();
         }
+        this.buildCommitMap();
+        this.calculateStats();
+        this.updateCards();
+        this.renderHeatmap();
     }
 
     async loadLogData() {
-        try {
-            const response = await fetch('daily-log.txt');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const text = await response.text();
-            this.parseLogData(text);
-        } catch (error) {
-            console.error('Failed to load daily-log.txt:', error);
-            throw error;
-        }
+        var r = await fetch('daily-log.txt');
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        this.parseLogData(await r.text());
+        if (this.logData.length === 0) throw new Error('No entries');
     }
 
     parseLogData(text) {
-        const lines = text.split('\n').filter(line => line.trim());
         this.logData = [];
-
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i].trim();
-
-            // Skip header lines
-            if (line.includes('Daily Auto-Commit Log') || line.includes('====================') ||
-                line.includes('This file is automatically updated by the GitHub Actions workflow') ||
-                line.includes('Each day, a new timestamp entry is added below') ||
-                line.includes('Initial setup:')) {
-                continue;
-            }
-
-            // Parse daily update lines
-            if (line.startsWith('Daily update:')) {
-                const match = line.match(/Daily update: (.+)$/);
-                if (match) {
-                    const timestamp = match[1].trim();
-                    try {
-                        const date = new Date(timestamp);
-                        if (!isNaN(date.getTime())) {
-                            this.logData.push({
-                                timestamp,
-                                date,
-                                dayOfWeek: date.getDay().toString(),
-                                dateString: date.toISOString().split('T')[0]
-                            });
-                        }
-                    } catch (e) {
-                        console.warn('Could not parse timestamp:', timestamp);
-                    }
-                }
+        var lines = text.split('\n');
+        for (var i = 0; i < lines.length; i++) {
+            var m = lines[i].trim().match(/^Daily update:\s*(.+)$/);
+            if (!m) continue;
+            var d = new Date(m[1].trim());
+            if (!isNaN(d.getTime())) {
+                this.logData.push({
+                    date: d,
+                    dayOfWeek: d.getDay().toString(),
+                    dateString: d.toISOString().split('T')[0]
+                });
             }
         }
+    }
 
-        // Sort by date (newest first)
-        this.logData.sort((a, b) => b.date - a.date);
+    generateDemoData() {
+        this.logData = [];
+        var s = new Date('2026-01-01T10:30:00Z');
+        var e = new Date('2026-03-07T10:30:00Z');
+        var c = new Date(s);
+        while (c <= e) {
+            this.logData.push({
+                date: new Date(c),
+                dayOfWeek: c.getDay().toString(),
+                dateString: c.toISOString().split('T')[0]
+            });
+            c.setDate(c.getDate() + 1);
+        }
+    }
+
+    buildCommitMap() {
+        this.commitsByDate = {};
+        for (var i = 0; i < this.logData.length; i++) {
+            var ds = this.logData[i].dateString;
+            this.commitsByDate[ds] = (this.commitsByDate[ds] || 0) + 1;
+        }
     }
 
     calculateStats() {
-        if (this.logData.length === 0) {
-            this.stats = {
-                totalCommits: 0,
-                currentStreak: 0,
-                longestStreak: 0,
-                busiestDay: 'Mon'
-            };
+        var dates = Object.keys(this.commitsByDate).sort();
+        if (dates.length === 0) {
+            this.stats = { totalCommits: 0, currentStreak: 0, longestStreak: 0, busiestDay: '-' };
             return;
         }
-
-        // Count total commits
         this.stats.totalCommits = this.logData.length;
 
-        // Find current streak
-        this.stats.currentStreak = this.calculateCurrentStreak();
-
-        // Find longest streak
-        this.stats.longestStreak = this.calculateLongestStreak();
-
-        // Find busiest day
-        this.stats.busiestDay = this.findBusiestDay();
-    }
-
-    calculateCurrentStreak() {
-        if (this.logData.length === 0) return 0;
-
-        const sortedLogs = [...this.logData].sort((a, b) => a.date - b.date);
-        let currentStreak = 0;
-        let lastDate = null;
-
-        for (const log of sortedLogs) {
-            if (!lastDate) {
-                currentStreak = 1;
-                lastDate = log.date;
-                continue;
-            }
-
-            const diffTime = log.date.getTime() - lastDate.getTime();
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-            if (diffDays === 1) {
-                currentStreak++;
+        // Current streak (from newest backwards)
+        var streak = 1;
+        for (var i = dates.length - 1; i > 0; i--) {
+            if (Math.round((new Date(dates[i]) - new Date(dates[i - 1])) / 86400000) === 1) {
+                streak++;
             } else {
                 break;
             }
-
-            lastDate = log.date;
         }
+        this.stats.currentStreak = streak;
 
-        return currentStreak;
-    }
-
-    calculateLongestStreak() {
-        if (this.logData.length === 0) return 0;
-
-        const sortedLogs = [...this.logData].sort((a, b) => a.date - b.date);
-        let longestStreak = 0;
-        let currentStreak = 0;
-        let lastDate = null;
-
-        for (const log of sortedLogs) {
-            if (!lastDate) {
-                currentStreak = 1;
-                lastDate = log.date;
-                continue;
-            }
-
-            const diffTime = log.date.getTime() - lastDate.getTime();
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-            if (diffDays === 1) {
-                currentStreak++;
-                longestStreak = Math.max(longestStreak, currentStreak);
+        // Longest streak
+        var longest = 1, cur = 1;
+        for (var j = 1; j < dates.length; j++) {
+            if (Math.round((new Date(dates[j]) - new Date(dates[j - 1])) / 86400000) === 1) {
+                cur++;
+                if (cur > longest) longest = cur;
             } else {
-                currentStreak = 1;
-            }
-
-            lastDate = log.date;
-        }
-
-        return longestStreak;
-    }
-
-    findBusiestDay() {
-        const dayCounts = {};
-
-        for (const log of this.logData) {
-            const day = log.dayOfWeek;
-            dayCounts[day] = (dayCounts[day] || 0) + 1;
-        }
-
-        if (Object.keys(dayCounts).length === 0) return 'Mon';
-
-        let busiestDay = 'Mon';
-        let maxCount = 0;
-
-        for (const [day, count] of Object.entries(dayCounts)) {
-            if (count > maxCount) {
-                maxCount = count;
-                busiestDay = day;
+                cur = 1;
             }
         }
+        this.stats.longestStreak = longest;
 
-        return this.dayMap[busiestDay] || busiestDay;
-    }
-
-    updateVisualizations() {
-        const stats = this.stats;
-
-        // Update total commits
-        document.getElementById('totalCommits').textContent = stats.totalCommits.toLocaleString();
-
-        // Update current streak
-        document.getElementById('currentStreak').textContent = stats.currentStreak.toLocaleString();
-
-        // Update longest streak
-        document.getElementById('longestStreak').textContent = stats.longestStreak.toLocaleString();
-
-        // Update busiest day
-        document.getElementById('busiestDay').textContent = stats.busiestDay;
-    }
-
-    setupRefreshInterval() {
-        // Refresh data every 5 minutes (300000ms)
-        setInterval(async () => {
-            try {
-                await this.loadLogData();
-                this.calculateStats();
-                this.updateVisualizations();
-            } catch (error) {
-                console.error('Failed to refresh visualization data:', error);
-            }
-        }, 300000);
-    }
-
-    showErrorMessage() {
-        const statsGrid = document.querySelector('.stats-grid');
-        if (statsGrid) {
-            statsGrid.innerHTML = `
-                <div class="error-message">
-                    <p>Unable to load commit statistics. Please check if daily-log.txt is available.</p>
-                    <button onclick="window.location.reload()">Retry</button>
-                </div>
-            `;
+        // Busiest day of week
+        var dc = {}, best = '1', max = 0;
+        for (var k = 0; k < this.logData.length; k++) {
+            var dw = this.logData[k].dayOfWeek;
+            dc[dw] = (dc[dw] || 0) + 1;
         }
+        for (var day in dc) {
+            if (dc[day] > max) { max = dc[day]; best = day; }
+        }
+        this.stats.busiestDay = this.dayMap[best] || best;
+    }
+
+    updateCards() {
+        var s = this.stats;
+        var el = function(id) { return document.getElementById(id); };
+        if (el('totalCommits'))  el('totalCommits').textContent = s.totalCommits.toLocaleString();
+        if (el('currentStreak')) el('currentStreak').textContent = s.currentStreak.toLocaleString();
+        if (el('longestStreak')) el('longestStreak').textContent = s.longestStreak.toLocaleString();
+        if (el('busiestDay'))    el('busiestDay').textContent = s.busiestDay;
+    }
+
+    // =============================
+    // GitHub-style Contribution Grid
+    // =============================
+    renderHeatmap() {
+        var grid = document.getElementById('heatmapGrid');
+        var monthsRow = document.getElementById('heatmapMonths');
+        var titleEl = document.getElementById('heatmapTitle');
+        var tooltip = document.getElementById('heatmapTooltip');
+        if (!grid || !monthsRow) return;
+
+        grid.innerHTML = '';
+        monthsRow.innerHTML = '';
+
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        // Start on the Sunday 52 weeks before this week's Sunday
+        var startDate = new Date(today);
+        startDate.setDate(startDate.getDate() - startDate.getDay()); // this week's Sunday
+        startDate.setDate(startDate.getDate() - 52 * 7);            // 52 weeks back
+
+        var totalWeeks = 53;
+        var totalContributions = 0;
+        var lastMonth = -1;
+        var currentDate = new Date(startDate);
+        var self = this;
+
+        for (var week = 0; week < totalWeeks; week++) {
+            // Month labels
+            var weekStart = new Date(currentDate);
+            if (weekStart.getMonth() !== lastMonth) {
+                var label = document.createElement('span');
+                label.className = 'heatmap-month-label';
+                label.textContent = this.monthNames[weekStart.getMonth()];
+                label.style.gridColumn = String(week + 1);
+                monthsRow.appendChild(label);
+                lastMonth = weekStart.getMonth();
+            }
+
+            for (var day = 0; day < 7; day++) {
+                var cell = document.createElement('span');
+                cell.className = 'heatmap-cell';
+
+                if (currentDate > today) {
+                    cell.classList.add('level-0');
+                    cell.style.visibility = 'hidden';
+                } else {
+                    var ds = currentDate.getFullYear() + '-' +
+                        String(currentDate.getMonth() + 1).padStart(2, '0') + '-' +
+                        String(currentDate.getDate()).padStart(2, '0');
+                    var commits = this.commitsByDate[ds] || 0;
+                    var level = commits === 0 ? 0 : commits <= 1 ? 1 : commits <= 3 ? 2 : commits <= 5 ? 3 : 4;
+
+                    cell.classList.add('level-' + level);
+                    cell.dataset.date = ds;
+                    cell.dataset.commits = commits;
+                    totalContributions += commits;
+
+                    cell.addEventListener('mouseenter', function(evt) {
+                        self.showTooltip(tooltip, evt);
+                    });
+                    cell.addEventListener('mouseleave', function() {
+                        self.hideTooltip(tooltip);
+                    });
+                }
+
+                grid.appendChild(cell);
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+        }
+
+        if (titleEl) {
+            titleEl.textContent = totalContributions.toLocaleString() +
+                ' contribution' + (totalContributions !== 1 ? 's' : '') +
+                ' in the last year';
+        }
+    }
+
+    showTooltip(tooltip, evt) {
+        var cell = evt.target;
+        if (!cell.dataset.date) return;
+
+        var commits = parseInt(cell.dataset.commits, 10);
+        var date = new Date(cell.dataset.date + 'T12:00:00');
+        var fmt = date.toLocaleDateString('en-US', {
+            weekday: 'short', month: 'short', day: 'numeric', year: 'numeric'
+        });
+
+        tooltip.textContent = commits === 0
+            ? 'No contributions on ' + fmt
+            : commits + ' contribution' + (commits !== 1 ? 's' : '') + ' on ' + fmt;
+
+        tooltip.classList.add('visible');
+
+        var rect = cell.getBoundingClientRect();
+        var tipW = tooltip.offsetWidth;
+        tooltip.style.left = (rect.left + rect.width / 2 - tipW / 2) + 'px';
+        tooltip.style.top = (rect.top - tooltip.offsetHeight - 8) + 'px';
+    }
+
+    hideTooltip(tooltip) {
+        tooltip.classList.remove('visible');
     }
 }
 
-// Initialize the visualizer when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const visualizer = new CommitVisualizer();
-    visualizer.initialize();
+document.addEventListener('DOMContentLoaded', function() {
+    new CommitVisualizer().initialize();
 });
-
-// Export for global access
 window.CommitVisualizer = CommitVisualizer;

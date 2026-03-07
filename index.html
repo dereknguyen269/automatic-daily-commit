@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatic Daily Commit - GitHub Actions Automation</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Apply saved theme immediately to prevent flash
+        if (localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -22,13 +26,31 @@
                     View on GitHub
                 </a>
             </div>
-            <button id="mobileMenuToggle" class="mobile-menu-toggle">
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+                    <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
-            </button>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -79,6 +101,40 @@
                     <div class="stat-label">Busiest Day</div>
                 </div>
             </div>
+
+            <!-- GitHub-style Contribution Heatmap -->
+            <div class="heatmap-wrapper">
+                <div class="heatmap-header">
+                    <span class="heatmap-title" id="heatmapTitle">0 contributions in the last year</span>
+                </div>
+                <div class="heatmap-container">
+                    <div class="heatmap-day-labels">
+                        <span></span>
+                        <span>Mon</span>
+                        <span></span>
+                        <span>Wed</span>
+                        <span></span>
+                        <span>Fri</span>
+                        <span></span>
+                    </div>
+                    <div class="heatmap-scroll">
+                        <div class="heatmap-months" id="heatmapMonths"></div>
+                        <div class="heatmap-grid" id="heatmapGrid"></div>
+                    </div>
+                </div>
+                <div class="heatmap-footer">
+                    <span class="heatmap-legend-label">Less</span>
+                    <div class="heatmap-legend">
+                        <span class="heatmap-cell level-0"></span>
+                        <span class="heatmap-cell level-1"></span>
+                        <span class="heatmap-cell level-2"></span>
+                        <span class="heatmap-cell level-3"></span>
+                        <span class="heatmap-cell level-4"></span>
+                    </div>
+                    <span class="heatmap-legend-label">More</span>
+                </div>
+            </div>
+            <div class="heatmap-tooltip" id="heatmapTooltip"></div>
         </div>
     </section>
 
@@ -200,7 +256,7 @@ git push origin main</code></pre>
         </div>
     </section>
 
-    <section class="use-cases">
+    <section id="use-cases" class="section use-cases">
         <div class="container">
             <h2>Use Cases</h2>
             <p>Perfect for various automation needs</p>
